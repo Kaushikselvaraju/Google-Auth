@@ -8,7 +8,7 @@ import Profile from "./components/Profile";
 function App() {
   const { isLoading } = useAuth0()
   if (isLoading) return <div className="flex flex-col items-center justify-center h-screen">
-    < EllipsisLoader/>
+    < EllipsisLoader color="white"/>
   </div>
 
   return (

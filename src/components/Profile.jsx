@@ -10,10 +10,19 @@ const Profile = () => {
         isAuthenticated && (
             <div className='flex flex-col align-center items-center justify-center h-screen'>
                 <div className='flex flex-col align-center items-center justify-center gap-3 mb-2'>
-                    <img src={user.picture} alt={user.name} style={{ width: "50px", borderRadius: "50%" }} />
-                    <h2>{user.name}</h2>
-                    <p>{user.email}</p>
-                    <p>{user.nickname}</p>
+                    <img src={user.picture} alt={user.name} style={{ width: "100px", borderRadius: "50%" }} />
+                    <div className="flex gap-1">
+                        <p className='font-bold'>User Name : </p>
+                        <h2>{user.name}</h2>
+                    </div>
+                    <div className="flex gap-1">
+                        <p className='font-bold'>Email Address :</p>
+                        <p>{user.email}</p>
+                    </div>
+                    <div className="flex gap-1">
+                        <p className='font-bold'>Nick Name :</p>
+                        <p>{user.nickname}</p>
+                    </div>
                 </div>
                 <LogoutButton />
             </div>
